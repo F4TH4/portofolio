@@ -190,7 +190,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 190px auto;
+  margin: 170px auto;
   flex-direction: column;
 }
 
@@ -236,7 +236,7 @@ body {
 
 .about {
   margin-top: 0px;
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: #B3B3B3;
   padding-bottom: 50px;
 }
@@ -270,7 +270,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
 
   max-width: 900px;
   margin-left: auto;
@@ -389,5 +389,3 @@ html {
 .resume-item.bawah {
   align-self: flex-end !important;
 }
-
-        
