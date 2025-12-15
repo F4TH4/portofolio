@@ -207,28 +207,6 @@ body {
   font-weight: ;
 }
 
-
- /* teks about 
-.resume  {
-  color: #555;
-  display: flex;
-  gap: 15px;
-  text-align: center;
-  padding-top: 0px;
-  align-items: flex-start;
-}
-
-.resume p {
-  margin: 0;
-  text-align: left;
-  background-color: #CACACA;
-  border-radius: 5px;
-  padding: 5px 15px;
-  transform: translateY(-40px);
-  align-self: flex-start;
-}
- */
- 
  .tombol {
   display: flex;
   gap: 15px;
@@ -260,7 +238,7 @@ body {
   margin-top: 0px;
   padding-top: 20px;
   background-color: #B3B3B3;
-  padding-bottom: 800px;
+  padding-bottom: 50px;
 }
 
 .about h2 {
@@ -306,7 +284,7 @@ html {
   padding: 16px 20px;
   border-radius: 16px;
 
-  max-width: 300px;   /* 🔥 INI YANG PENTING */
+  max-width: 300px;   /* INI YANG PENTING */
   width: 100%;
 
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
@@ -341,6 +319,8 @@ html {
 @media (max-width: 600px) {
   .resume-item {
     max-width: 90%;
+    padding: 20px 24px;
+    font-size: 1.5rem;
   }
 
   .atas,
@@ -352,13 +332,13 @@ html {
 /* DESKTOP / LAPTOP */
 @media (min-width: 1024px) {
   .resume-item {
-    max-width: 500px;   /* box lebih lebar */
-    padding: 24px 28px; /* isi lebih lega */
-    font-size: 1.05rem;
+    max-width: 600px;   /* box lebih lebar */
+    padding: 30px 36px; /* isi lebih lega */
+    font-size: 1.2rem;
   }
 
   .resume-container {
-    max-width: 1100px; /* area zig-zag lebih luas */
+    max-width: 1200px; /* area zig-zag lebih luas */
   }
 }
 
@@ -366,16 +346,48 @@ html {
 
 .resume-item.reveal {
   opacity: 0;
-  transform: translateY(40px);
 }
 
 .resume-item.reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 
-.resume-item:nth-child(1) { transition-delay: 0.1s; }
-.resume-item:nth-child(2) { transition-delay: 0.25s; }
-.resume-item:nth-child(3) { transition-delay: 0.4s; }
-.resume-item:nth-child(4) { transition-delay: 0.55s; }
+
+
+
+.section-space {
+  height: 60px;                /* jarak */
+  background-color: var(--primary);   /* SESUAI background body */
+}
+
+
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+
+.resume-item.atas {
+  align-self: flex-start !important;
+}
+
+.resume-item.bawah {
+  align-self: flex-end !important;
+}
+
+        
