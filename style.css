@@ -284,4 +284,98 @@ body {
 html {
   scroll-padding-top: 190px; /* tinggi navbar */
   scroll-behavior: smooth;
-   }
+}
+
+
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.resume-item {
+  background: white;
+  color: black;
+  padding: 16px 20px;
+  border-radius: 16px;
+
+  max-width: 300px;   /* 🔥 INI YANG PENTING */
+  width: 100%;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.resume-item {
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-item:hover {
+  transform: translateY(-8px);
+}
+
+
+
+
+
+/* zig-zag */
+.atas {
+  align-self: flex-start;
+}
+
+.bawah {
+  align-self: flex-end;
+}
+
+
+/* mobile aman */
+@media (max-width: 600px) {
+  .resume-item {
+    max-width: 90%;
+  }
+
+  .atas,
+  .bawah {
+    align-self: center;
+  }
+}
+
+/* DESKTOP / LAPTOP */
+@media (min-width: 1024px) {
+  .resume-item {
+    max-width: 500px;   /* box lebih lebar */
+    padding: 24px 28px; /* isi lebih lega */
+    font-size: 1.05rem;
+  }
+
+  .resume-container {
+    max-width: 1100px; /* area zig-zag lebih luas */
+  }
+}
+
+
+
+.resume-item.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.resume-item.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.resume-item:nth-child(1) { transition-delay: 0.1s; }
+.resume-item:nth-child(2) { transition-delay: 0.25s; }
+.resume-item:nth-child(3) { transition-delay: 0.4s; }
+.resume-item:nth-child(4) { transition-delay: 0.55s; }
