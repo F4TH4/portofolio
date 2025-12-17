@@ -38,9 +38,10 @@ body {
 .navbar .navLog {
   font-size: 1.5rem;
   color: #2D2D2D;
-  font-family: "Exo 2", sans serif;
-  font-style: italic;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
+  font-style: normal;
 }
 
 .navbar .navLog span {
